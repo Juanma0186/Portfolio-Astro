@@ -1,0 +1,48 @@
+---
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/#inicio",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "/#contacto",
+  },
+];
+
+import DarkMode from "@components/DarkMode.astro";
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex flex-row text-base items-center justify-center pt-4 gap-x-8 dark:text-white/90"
+  >
+    {
+      navItems.map((item) => {
+        return (
+          <a
+            href={item.url}
+            class="hover:text-purple-600 dark:hover:text-purple-300"
+          >
+            {item.title}
+          </a>
+        );
+      })
+    }
+    <DarkMode />
+  </nav>
+</header>
