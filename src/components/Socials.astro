@@ -1,0 +1,29 @@
+---
+import EmailIcon from "@icons/EmailIcon.astro";
+import GithubIcon from "@icons/GithubIcon.astro";
+import LinkedInIcon from "@icons/LinkedInIcon.astro";
+import CvIcon from "@icons/CvIcon.astro";
+import Pill from "@/components/Pill.astro";
+---
+
+<nav class="flex flex-wrap gap-4 mt-4">
+  <Pill
+    href="mailto:juanma0186@gmail.com"
+    class="dark:hover:text-purple-400/90"
+  >
+    <EmailIcon class="w-6 h-6" />
+    <span>Contactar</span>
+  </Pill>
+  <Pill href="/CV.pdf" download>
+    <CvIcon class="w-6 h-6" />
+    <span>Descargar CV</span>
+  </Pill>
+  <Pill href="https://www.linkedin.com/in/juanma0186/">
+    <LinkedInIcon class="w-6 h-6" />
+    <span>LinkedIn</span>
+  </Pill>
+  <Pill href="https://github.com/Juanma0186">
+    <GithubIcon class="w-6 h-6" />
+    <span>GitHub</span>
+  </Pill>
+</nav>

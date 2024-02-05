@@ -1,7 +1,7 @@
 ---
-import SunIcon from "./icons/SunIcon.astro";
-import MoonIcon from "./icons/MoonIcon.astro";
-import SystemIcon from "./icons/SystemIcon.astro";
+import SunIcon from "@/components/icons/SunIcon.astro";
+import MoonIcon from "@/components/icons/MoonIcon.astro";
+import SystemIcon from "@/components/icons/SystemIcon.astro";
 
 const THEMES = ["Light", "Dark", "System"];
 ---
@@ -12,21 +12,24 @@ const THEMES = ["Light", "Dark", "System"];
     class="appearance-none border-none flex hover:scale-125 transition"
   >
     <span class="sr-only">Elige el tema</span>
-    <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
+    <SunIcon
+      id="light"
+      class="theme-toggle-icon size-5 transition-all hover:text-purple-600/90 dark:hover:text-purple-400/90"
+    />
     <MoonIcon
       id="dark"
-      class="theme-toggle-icon absolute size-5 transition-all"
+      class="theme-toggle-icon absolute size-5 transition-all hover:text-purple-600/90 dark:hover:text-purple-400/90"
     />
     <SystemIcon
       id="system"
-      class="theme-toggle-icon absolute size-5 transition-all"
+      class="theme-toggle-icon absolute size-5 transition-all hover:text-purple-600/90 dark:hover:text-purple-400/90"
     />
   </button>
   <div
     id="themes-menu"
-    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-lg border border-white bg-white/70 dark:bg-neutral-900/70 dark:border-neutral-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-lg border border-white bg-white/90 dark:bg-neutral-900/90 dark:border-neutral-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
   >
-    <ul>
+    <ul class="backdrop-blur">
       {
         THEMES.map((theme) => (
           <li class="themes-menu-option cursor-pointer px-2 py-1.5 hover:bg-neutral-400/40 dark:hover:bg-neutral-500/50 rounded-lg">
@@ -47,10 +50,12 @@ const THEMES = ["Light", "Dark", "System"];
     from {
       transform: scale(0.8);
       opacity: 0;
+      display: none;
     }
     to {
       transform: scale(1);
       opacity: 1;
+      display: block;
     }
   }
 </style>

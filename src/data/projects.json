@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Gestor de Tareas",
+    "description": "Aplicación para gestionar tareas con Drag-and-Drop",
+    "image": "/images/projects/gestorDeTareas.webp",
+    "url": "/#gestorDeTareas",
+    "technologies": [
+      "HTML",
+      "SASS",
+      "JavaScript",
+      "Node.js",
+      "Express"
+    ]
+  }
+]

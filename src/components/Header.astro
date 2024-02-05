@@ -22,21 +22,21 @@ const navItems = [
   },
 ];
 
-import DarkMode from "@components/DarkMode.astro";
+import DarkMode from "@/components/DarkMode.astro";
 ---
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex flex-row text-base items-center justify-center pt-4 gap-x-8 dark:text-white/90"
+    class="flex px-3 text-sm font-medium rounded-full text-neutral-800 dark:text-gray-200 justify-center items-center"
   >
     {
       navItems.map((item) => {
         return (
           <a
             href={item.url}
-            class="hover:text-purple-600 dark:hover:text-purple-300"
+            class="hover:text-purple-600/90 dark:hover:text-purple-400/90 px-2 py-2 transition"
           >
             {item.title}
           </a>
@@ -46,3 +46,18 @@ import DarkMode from "@components/DarkMode.astro";
     <DarkMode />
   </nav>
 </header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-neutral-300/30 ring-white/10;
+      @apply dark:text-blue-400;
+    }
+  }
+</style>

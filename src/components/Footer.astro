@@ -1,0 +1,41 @@
+---
+import AstroIcon from "@icons/Tech/AstroIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import EmailIcon from "./icons/EmailIcon.astro";
+---
+
+<footer
+  class="flex flex-col items-center justify-center w-full gap-2 p-4 border-t md:justify-around md:flex-row min-h-16 mt-7 dark:border-white/10 border-neutral-800/30"
+>
+  <div class="flex items-center gap-x-4">
+    <p
+      class="font-semibold [&>strong]:text-purple-600/90 dark:[&>strong]:text-purple-400/90"
+    >
+      He realizado mi Portfolio usando <strong>Astro</strong>
+    </p>
+    <AstroIcon class="w-8 h-8" />
+  </div>
+
+  <div class="flex items-center gap-x-4 text-neutral-600 dark:text-neutral-400">
+    <a
+      class="flex text-sm underline gap-x-2 dark:hover:text-white"
+      href="mailto:juanma0186@gmail.com"
+      rel="noopener noreferrer"
+    >
+      <EmailIcon class="size-5" /> Ponte en contacto conmigo
+    </a>
+    <a
+      class="cursor-pointer dark:hover:text-white"
+      href="https://www.github.com/Juanma0186"
+      target="_blank"
+      rel="noopener noreferrer"><GithubIcon class="size-5" /></a
+    >
+    <a
+      class="cursor-pointer dark:hover:text-white"
+      href="https://www.linkedin.com/in/juanma0186/"
+      target="_blank"
+      rel="noopener noreferrer"><LinkedInIcon class="size-5" /></a
+    >
+  </div>
+</footer>

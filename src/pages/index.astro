@@ -1,12 +1,44 @@
 ---
+import Hero from "@/components/Hero.astro";
+import Proyects from "@/components/Proyects.astro";
+import Section from "@/components/Section.astro";
+import ToTop from "@/components/ToTop.astro";
+import BrushIcon from "@/components/icons/BrushIcon.astro";
 import Layout from "@/layouts/Layout.astro";
+import PersonIcon from "@icons/PersonIcon.astro";
 ---
 
 <Layout
   title="Portfolio Juanma"
   description="Portfolio de Juanma, desarrollador web especializado en el frontend. Aquí encontrarás mis proyectos, sobre mí y más."
 >
-  <main class="flex flex-col w-1/2 mx-auto">
-    <slot />
+  <main class="mx-4">
+    <ToTop />
+    <Section class="pt-24 pb-8 md:pt-36">
+      <Hero />
+    </Section>
+    <Section class="pt-8">
+      <h2
+        class="flex items-center mb-4 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <BrushIcon class="size-8" />
+        Proyectos
+      </h2>
+      <Proyects />
+    </Section>
+    <Section class="pt-8">
+      <h2
+        class="flex items-center mb-4 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <PersonIcon class="size-8" />
+        Sobre mí
+      </h2>
+      <p class="text-lg text-black/80 dark:text-white">
+        Soy Juanma, desarrollador web especializado en el frontend. Me encanta
+        crear cosas en la web, desde pequeñas páginas hasta aplicaciones
+        complejas. Me gusta aprender cosas nuevas y ayudar a los demás.
+      </p>
+    </Section>
+    <Section class="pt-8" />
   </main>
 </Layout>
