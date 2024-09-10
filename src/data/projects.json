@@ -3,13 +3,24 @@
     "title": "Gestor de Tareas",
     "description": "Aplicación para gestionar tareas con Drag-and-Drop",
     "image": "/images/projects/gestorDeTareas.webp",
-    "url": "/#gestorDeTareas",
+    "url": "#",
     "technologies": [
       "HTML",
       "SASS",
       "JavaScript",
       "Node.js",
       "Express"
+    ]
+  },
+  {
+    "title": "Film-E",
+    "description": "Aplicación para búsqueda de información de películas y series",
+    "image": "/images/projects/filme.webp",
+    "url": "https://film-e-js.netlify.app/",
+    "technologies": [
+      "HTML",
+      "Tailwind",
+      "JavaScript"
     ]
   }
 ]
